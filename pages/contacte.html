@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ge">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Procopii Tatiana- Contacte</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <div class="header">
+        <nav>
+            <a class="nav-link" href="../index.html#despre"> Über </a>
+            <a class="nav-link" href="../index.html#experienta"> Erlebnis</a>
+            <a class="nav-link" href="../index.html#educatie"> Bildung</a>
+            <a class="nav-link" href=""> Kontakt</a>
+
+        </nav>
+
+    </div>
+
+    <div class="main">
+        <div class="info">
+            <table class="tabel-contacte">
+                <tr>
+                    <td class="celula-formular">
+                        <h3 class="centered albastru"> Kontakte mich </h3>
+
+                        <form id="formular" method="POST" action="https://sheetdb.io/api/v1/ys2jxuwpk879o">
+                            <input type="text" name="data[Nume]" class="text-input" placeholder="Name Vorname"> <br>
+
+                            <input type="email" name="data[Email]" class="text-input" placeholder="Email"> <br>
+
+                            <textarea name="data[Intrebare]" class="intrebare" cols="50" rows="10"
+                                placeholder="Schreib deine Frage"></textarea> <br>
+
+                            <input type="submit" class="transmite" value="Schick">
+
+                        </form>
+
+                    </td>
+
+                    <td class="celula-harta">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1891.5929219518775!2d28.29139792845908!3d47.89543301069744!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40cc9acc0bfd2a9d%3A0x7800cdc29ea4e3fe!2sLiceul%20Teoretic%20%E2%80%9EMiron%20Costin%E2%80%9D!5e0!3m2!1sro!2s!4v1713275731766!5m2!1sro!2s"
+                            width="450" height="350" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+
+                    </td>
+
+
+                </tr>
+
+            </table>
+
+        </div>
+
+        <div class="fb-comments" data-width="100%" data-href="http://tekwill.online/sakura.tako.7" data-numposts="5" data-order-by="reverse_time">
+
+        </div>
+
+        
+
+    </div>
+
+    <footer>
+        Procopii Tatiana
+    </footer>
+    <script>
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.4";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+
+
+        var form = document.getElementById('formular');
+        form.addEventListener("submit", e => {
+            e.preventDefault();
+            fetch(form.action, {
+                method: "POST",
+                body: new FormData(document.getElementById("formular")),
+            }).then(() => {
+                alert("Multumesc !");
+                form.reset();
+            });
+        });
+    </script>
+
+</body>
+
+</html>
